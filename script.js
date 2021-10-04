@@ -18,8 +18,12 @@ function countdown() {
 
     daysDisplay.innerHTML = days;
     hoursDisplay.innerHTML = hours;
-    minDisplay.innerHTML = minutes;
-    secDisplay.innerHTML = seconds;
+    minDisplay.innerHTML = formatTime(minutes);
+    secDisplay.innerHTML = formatTime(seconds);
+}
+
+function formatTime(time) {
+    return time < 10 ? `0${time}` : time;
 }
 
 countdown();
