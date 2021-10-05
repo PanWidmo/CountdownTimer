@@ -11,7 +11,11 @@
 <body>
     <h1>Tick tock...</h1>
 
-    <div class="countdown-container">
+    <input type="date" class="date-input" id="dateSelected" />
+
+    <button type="button" class="confirm-button" id="btn" onClick="countdown()">Check</button>
+
+    <div class="countdown-container" id="countdown">
         <div class="days-container countdown-elements">
             <p class="big-text" id="days">0</p>
             <label>days</label>

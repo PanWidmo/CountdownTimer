@@ -3,9 +3,10 @@ const hoursDisplay = document.getElementById('hours');
 const minDisplay = document.getElementById('min');
 const secDisplay = document.getElementById('sec');
 
-const newYears = '1 Jan 2022';
 
 function countdown() {
+    const newYears = document.getElementById('dateSelected').value;
+
     const newYearsDate = new Date(newYears);
     const currentDate = new Date();
 
@@ -20,12 +21,11 @@ function countdown() {
     hoursDisplay.innerHTML = hours;
     minDisplay.innerHTML = formatTime(minutes);
     secDisplay.innerHTML = formatTime(seconds);
+
+    setInterval(countdown, 1000);
 }
 
 function formatTime(time) {
     return time < 10 ? `0${time}` : time;
 }
 
-countdown();
-
-setInterval(countdown, 1000);
