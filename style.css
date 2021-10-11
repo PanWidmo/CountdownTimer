@@ -42,7 +42,7 @@ h1{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    visibility: visible;
+    visibility: hidden;
 }
 
 .big-text{
@@ -53,6 +53,7 @@ h1{
 
 .countdown-elements{
     text-align: center;
+    width: 15rem;
 }
 
 .countdown-elements label{
